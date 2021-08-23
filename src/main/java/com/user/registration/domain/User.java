@@ -2,22 +2,17 @@ package com.user.registration.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
-import java.util.Date;
-
+import java.sql.Date;
 
 @Getter
 @Setter
-@ToString
 public class User {
-
 
     private String name;
     private String gender;
-    private String dateOfBirth;
+    private Date dateOfBirth;
     private String description;
     private String skills;
-
 
 }

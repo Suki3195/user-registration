@@ -1,6 +1,5 @@
 package com.user.registration.controller;
 
-
 import com.user.registration.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +20,6 @@ public class UserRegistrationController {
 
     @PostMapping("/register")
     public String submitForm(@ModelAttribute("user") User user){
-        System.out.println(user);
         return "register_success";
     }
 }

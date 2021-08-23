@@ -23,26 +23,27 @@
   <h1> User Registration Form</h1>
   <form action="#" th.action="@{/register}" th.object="${user}" method="post">
       <label> Full Name : </label>
-      <input type="text" th:value="${user.name}" id="name" name="name" > <br/>
+      <input type="text" th:value="${user.name}" id="name" name="name" required > <br/>
 
       <label> Date Of Birth (yyyy-mm-dd): </label>
-      <input type="text" th:value="${user.dateOfBirth}" id="dateOfBirth" name="dateOfBirth" > <br/>
+      <input type="text" th:value="${user.dateOfBirth}" id="dateOfBirth" name="dateOfBirth" pattern="\d{4}\-\d{1,2}\-\d{1,2}"onerror="Please enter date in format (yyyy-mm-dd) " required > <br/>
 
-      <label>Gender :-</label>
-      <input type="radio" name="gender" value="Male">Male
-      <input type="radio" name="gender" value="Female">Female
-      <input type="radio" name="gender" value="Others">Others   <br/>
+       <label>Gender :-</label>
+      <input type="radio" name="gender" value="Male" required >Male
+      <input type="radio" name="gender" value="Female" required >Female
+      <input type="radio" name="gender" value="Others" required >Others   <br/>
 
 
       <label>Skills :</label>
-      <input type="checkbox" name="skills" value = "Java e2e" /> Java e2e
-      <input type="checkbox" name="skills" value = "SQL" /> SQL
-      <input type="checkbox" name="skills" value = "Spring FrameWork" />Spring FrameWork
-      <input type="checkbox" name="skills" value = "DevOps" />DevOps
-      <input type="checkbox" name="skills" value = "CI/CD" />CI/CD<br/>
+      <input type="checkbox" name="skills" value = "Java E2E"  /> Java E2E
+      <input type="checkbox" name="skills" value = "SQL"  /> SQL
+      <input type="checkbox" name="skills" value = "CI/CD"  />CI/CD<br/> <br/>
+      <input type="checkbox" name="skills" value = "Spring FrameWork"  />Spring FrameWork
+      <input type="checkbox" name="skills" value = "DevOps"  />DevOps <br/>
+
 
       <label>Description:</label>
-      <textarea name="description" rows="4" cols="50" minlength="1" placeholder="Enter your description here." required>
+      <textarea name="description" rows="4" cols="40" minlength="100" placeholder="Enter your description in here." required >
         </textarea> <br/>
 
 
