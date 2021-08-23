@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>User Registration</title>
+    <style type="text/css">
+    label{
+        display: inline-block;
+        width: 200px;
+        margin: 5px;
+        text-align: left;
+    }
+    button {
+        margin: 10px;
+        padding: 10px;
+    }
+
+
+    </style>
 </head>
 <body>
 <div align="center">
@@ -11,6 +25,25 @@
       <label> Full Name : </label>
       <input type="text" th:value="${user.name}" id="name" name="name" > <br/>
 
+      <label> Date Of Birth (yyyy-mm-dd): </label>
+      <input type="text" th:value="${user.dateOfBirth}" id="dateOfBirth" name="dateOfBirth" > <br/>
+
+      <label>Gender :-</label>
+      <input type="radio" name="gender" value="Male">Male
+      <input type="radio" name="gender" value="Female">Female
+      <input type="radio" name="gender" value="Others">Others   <br/>
+
+
+      <label>Skills :</label>
+      <input type="checkbox" name="skills" value = "Java e2e" /> Java e2e
+      <input type="checkbox" name="skills" value = "SQL" /> SQL
+      <input type="checkbox" name="skills" value = "Spring FrameWork" />Spring FrameWork
+      <input type="checkbox" name="skills" value = "DevOps" />DevOps
+      <input type="checkbox" name="skills" value = "CI/CD" />CI/CD<br/>
+
+      <label>Description:</label>
+      <textarea name="description" rows="4" cols="50" minlength="1" placeholder="Enter your description here." required>
+        </textarea> <br/>
 
 
 

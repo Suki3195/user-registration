@@ -12,10 +12,12 @@ import java.util.Date;
 @ToString
 public class User {
 
+
     private String name;
     private String gender;
-    private String note;
+    private String dateOfBirth;
+    private String description;
     private String skills;
-    private Date dateOfBirth;
+
 
 }

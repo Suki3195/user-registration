@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration Successful</title>
+    <style type="text/css">
+    span{
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+    }
+    </style>
 </head>
 <body>
 <div align="center">
     <h1> User Registration Successfull !!</h1>
-    <span>Full Name :  </span><span th:text="${user.name}"></span>
-<!--        <span> Full Name :  </span> <span >th:value="${user.name}"</span>-->
+    <span>Full Name :  </span><span th:text="${user.name}"></span>  <br/>
+    <span>Gender :  </span><span th:text="${user.gender}"></span>  <br/>
+    <span>Date Of Birth :  </span><span th:text="${user.dateOfBirth}"></span>  <br/>
+    <span>Description :  </span><span th:text="${user.description}"></span>  <br/>
+    <span>Skills :  </span><span th:text="${user.skills}"></span>  <br/>
+
 </div>
 </body>
 </html>
